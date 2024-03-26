@@ -125,32 +125,3 @@ if ($emails) {
 }
 // Закрытие соединения с почтовым сервером
 imap_close($inbox);
-
-/* require __DIR__ .'\mail.php'; */
-
-/* $mail = new PHPMailer\PHPMailer\PHPMailer(true);
-$mail->CharSet = "UTF-8";
-
-try {
-    // Настройки сервера
-    $mail->isSMTP();
-    $mail->Host = 'smtp.yandex.ru';
-    $mail->SMTPAuth = true;
-    $mail->Username = 'd.murzin1@yandex.ru';
-    $mail->Password = 'ovgyqmcdktpcxacn';
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port = 465;
-
-    // Настройки сообщения
-    $mail->setFrom('bank@semena74.com', 'Имя отправителя');
-    $mail->addAddress('ip-team@bk.ru', 'Имя получателя');
-    $mail->addAttachment( __DIR__ .'/loc/bank_'.$yesterday_date.'.csv');
-    $mail->Subject = 'Тема письма';
-    $mail->Body = "В интернет-магазине сменился согласно расписанию отправитель для документов. Время смены: ".date("d/m/Y H:i:s")." MSK. Новое значение:";
-
-    // Отправка сообщения
-    $mail->send();
-    echo 'Письмо успешно отправлено';
-} catch (Exception $e) {
-    echo 'Ошибка отправки письма: ' . $mail->ErrorInfo;
-} */
